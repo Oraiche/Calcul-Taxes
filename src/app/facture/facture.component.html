@@ -9,7 +9,7 @@
     <a href="//www.bmait.com" class="text-success ">www.bmait.com</a>
   </div>
   <div class="text-center ">
-    <p class="text-success">La date de la Facture:  {{date|date:'dd-MM-yyyy'}}</p>
+    <p class="text-success">Date de la Facture:  {{date|date:'dd-MM-yyyy'}}</p>
 
   </div>
 
@@ -23,7 +23,7 @@
        </thead>
        <tbody>
        <tr *ngFor="let p of produits">
-         <td> {{p.desination}}</td>
+         <td> {{p.desination }}</td>
          <td>{{p.prixHt}}
            <i class="bi bi-currency-euro"></i>
          </td>

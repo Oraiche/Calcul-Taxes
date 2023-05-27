@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Produit, ProduitCategorie} from "../model/Produit";
 
 
+
 @Component({
   selector: 'app-facture',
   templateUrl: './facture.component.html',
