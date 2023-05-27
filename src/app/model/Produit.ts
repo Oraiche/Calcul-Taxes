@@ -1,9 +1,9 @@
-export enum ProduitCategorie{
+export enum ProduitCategorie{     // Definition des constantes ProduitCategories sous fome d un Enum
   PREMIERNECESSITE,
   LIVRE,
   AUTRE
 }
-export class Produit{
+export class Produit{            // Definition de model Produit
   id!:number;
   desination!:string;
   prixHt!:number;

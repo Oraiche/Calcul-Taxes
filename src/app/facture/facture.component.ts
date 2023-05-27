@@ -10,25 +10,25 @@ import {Produit, ProduitCategorie} from "../model/Produit";
 })
 export class FactureComponent{
 
- @Input() produits: Array<Produit>=[];
+ @Input() produits: Array<Produit>=[];   //liste des produits a afficher
 date=new Date();
   constructor() {
   }
   imprimer() {
     window.print();
   }
-  public arrondirAu5Centimes(nombre:number):number{
+  public arrondirAu5Centimes(nombre:number):number{    // fonction qui renvoie l arroundi au 5 Centimes d un nombre donner
     let res;
       res=Math.ceil(nombre * 20) / 20;
     return res;
   }
   // @ts-ignore
-  public calculPrixTtc(produit:Produit) :number{
+  public calculPrixTtc(produit:Produit) :number{     //Calcul de prixTTC Total d un produit
     switch (produit.produitCategorie){
-      case ProduitCategorie.AUTRE:{
+      case ProduitCategorie.AUTRE:{                  // Le cacul est arroundi au 5 centimes
         if (produit.isImporte)
           return this.arrondirAu5Centimes(produit.prixHt*1.25*produit.qauntinte);
-        else return  this.arrondirAu5Centimes(produit.prixHt*1.2*produit.qauntinte);
+        else return  this.arrondirAu5Centimes(produit.prixHt*1.2*produit.qauntinte);   // Calcul des taxes suivant la categorie du produit et le boolen Is Importe
         break;
       }
       case ProduitCategorie.LIVRE:{
@@ -46,9 +46,9 @@ date=new Date();
     }
   }
 
-  public calculSommePrixHt(produits:Array<Produit>) :number{
+  public calculSommePrixHt(produits:Array<Produit>) :number{      //Calcul de la somme des prixHt d une liste de produit
     let sum = 0;
-    for (let i = 0; i <produits.length ; i++) {
+    for (let i = 0; i <produits.length ; i++) {                   // Le cacul est arroundi au 5 centimes
       sum=sum+produits[i].prixHt*produits[i].qauntinte;
     }
     return sum;
@@ -61,7 +61,7 @@ date=new Date();
     return sum;
   }
 
-  public calculSommeTaxes(produits:Array<Produit>) :number{
+  public calculSommeTaxes(produits:Array<Produit>) :number{      // Calcul de la somme des Taxes d une liste de produits
 
     let sum = 0;
     for (let i = 0; i <produits.length ; i++) {
