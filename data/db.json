@@ -1,0 +1,92 @@
+{
+  "paniers"
+  : [
+  {
+    "id": 1,
+    "produits": [
+      {
+        "id": 1,
+        "desination": "Livre",
+        "prixHt": 12.49,
+        "isImporte": false,
+        "qauntinte": 2,
+        "produitCategorie": "ProduitCategorie.LIVRE"
+      },
+      {
+        "id": 2,
+        "desination": "CD misucal",
+        "prixHt": 14.99,
+        "isImporte": false,
+        "qauntinte": 1,
+        "produitCategorie": "ProduitCategorie.AUTRE"
+      },
+      {
+        "id": 3,
+        "desination": "Barre chocolat",
+        "prixHt": 0.85,
+        "isImporte": false,
+        "qauntinte": 3,
+        "produitCategorie": "ProduitCategorie.PREMIERNECESSITE"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "produits": [
+      {
+        "id": 1,
+        "desination": "Boite chocolat",
+        "prixHt": 10,
+        "isImporte": true,
+        "qauntinte": 2,
+        "produitCategorie": "ProduitCategorie.PREMIERNECESSITE"
+      },
+      {
+        "id": 2,
+        "desination": "Flacon Parfin",
+        "prixHt": 47.5,
+        "isImporte": true,
+        "qauntinte": 3,
+        "produitCategorie": "ProduitCategorie.AUTRE"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "produits": [
+      {
+        "id": 1,
+        "desination": "boîtes de pilules contre la migraine",
+        "prixHt": 9.75,
+        "isImporte": false,
+        "qauntinte": 3,
+        "produitCategorie": "ProduitCategorie.PREMIERNECESSITE"
+      },
+      {
+        "id": 2,
+        "desination": "boites de cohocolats",
+        "prixHt": 11.25,
+        "isImporte": true,
+        "qauntinte": 2,
+        "produitCategorie": "ProduitCategorie.PREMIERNECESSITE"
+      },
+      {
+        "id": 3,
+        "desination": "Flacon de Parfin",
+        "prixHt": 27.99,
+        "isImporte": true,
+        "qauntinte": 2,
+        "produitCategorie": "ProduitCategorie.AUTRE"
+      },
+      {
+        "id": 4,
+        "desination": "Flacon de Parfin",
+        "prixHt": 18.99,
+        "isImporte": false,
+        "qauntinte": 1,
+        "produitCategorie": "ProduitCategorie.AUTRE"
+      }
+    ]
+  }
+]
+}

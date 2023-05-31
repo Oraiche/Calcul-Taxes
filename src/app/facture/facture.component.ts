@@ -1,22 +1,22 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Produit, ProduitCategorie} from "../model/Produit";
-
-
+import {ProduitService} from "../produit.service";
 
 @Component({
   selector: 'app-facture',
   templateUrl: './facture.component.html',
   styleUrls: ['./facture.component.css']
 })
-export class FactureComponent{
-
+export class FactureComponent implements OnInit{
+  ajouterProduit:boolean=false;
  @Input() produits: Array<Produit>=[];   //liste des produits a afficher
 date=new Date();
-  constructor() {
+  constructor(private ps:ProduitService) {
   }
-  imprimer() {
-    window.print();
+  ngOnInit() {
+
   }
+
   public arrondirAu5Centimes(nombre:number):number{    // fonction qui renvoie l arroundi au 5 Centimes d un nombre donner
     let res;
       res=Math.ceil(nombre * 20) / 20;
@@ -69,6 +69,8 @@ date=new Date();
     }
     return sum;
   }
+
+
 
 
 }
