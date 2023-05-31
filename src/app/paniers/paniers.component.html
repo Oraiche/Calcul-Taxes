@@ -1,5 +1,14 @@
 <h2 class="text-center text-light p-2 m-4 bg-success">Calcul des taxes et factures</h2>
+<div class="m-4">
+  <button (click)="handlAjouterProduit()" class="btn btn-outline-info" >Ajouter un Produit
+    <i class="bi-arrow-down-square-fill"></i>
+  </button>
+  <div *ngIf="ajouterProduit">
+    <app-new-produit></app-new-produit>
+  </div>
+</div>
  <div class="card p-1 m-4 bg-opacity-50">
+
 <div class="menu">
 
   <button  *ngFor="let panier of paniers"
@@ -8,7 +17,7 @@
            class=" btn btn-outline-info m-2 p-2">{{ panier.nom }}
   </button>
 
-</div>
+
  </div>
 <app-facture *ngIf="factureAffichee" [produits]="produitsFacture"></app-facture>
 
